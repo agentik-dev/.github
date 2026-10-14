@@ -30,73 +30,85 @@ Everything it writes for people passes a check against a list of banned phrases.
 agents runs side work, such as a read-only code review, outside your interactive session.
 It bills that work to an Anthropic API key, or runs it on a local model, and reports what it cost.
 
-## The five repos
+## The repos
+
+### [agentik-commons](https://github.com/agentik-dev/agentik-commons)
+
+The ground the five tools share; it builds no tool of its own.
+It holds the `agentik` marketplace that every plugin installs from, the `agentik` front door, and the guide the tools follow for names, verbs and exit codes.
+Add the marketplace once:
+
+```sh
+claude plugin marketplace add agentik-dev/agentik-commons
+```
+
+Each command line tool below installs from a clone with `make install`, into `~/.local/bin`, before its plugin, `<plugin>@agentik`.
+`make install` also installs the front door: `agentik <tool> …` runs `agentik-<tool>`, and `agentik` alone lists the tools it finds.
 
 ### [agentik-session](https://github.com/agentik-dev/agentik-session)
 
-A plugin and a `claude-session` tool that give each Claude Code session a profile, a budget with a hard stop, and a written charter.
+A plugin, `session`, and a tool, `agentik-session`, that give each Claude Code session a profile, a budget with a hard stop, and a written charter.
 Use it so a session winds down at a known point and leaves a record you can read.
 
 ```sh
-claude plugin marketplace add agentik-dev/agentik-session
-claude plugin install session@claude-code-session
-make install    # from a clone: the claude-session CLI, Python 3.11 or newer
+git clone https://github.com/agentik-dev/agentik-session.git
+cd agentik-session && make install  # agentik-session; Python 3.11 or newer
+claude plugin install session@agentik
 ```
 
-Then run `claude-session doctor` to check the setup.
+Then run `agentik session doctor` to check the setup.
 
 ### [agentik-relay](https://github.com/agentik-dev/agentik-relay)
 
-A Go binary, `relay`, and a plugin, `agent-relay`, that run a queue of packets overnight with no one at the keyboard.
-Each queue row merges into `main` only when its gate passes, and `relay resume <row>` reopens any row that stopped.
+A Go binary, `agentik-relay`, and a plugin, `relay`, that run a queue of packets overnight with no one at the keyboard.
+Each queue row merges into `main` only when its gate passes, and `agentik relay resume <row>` reopens any row that stopped.
 
 ```sh
-claude plugin marketplace add agentik-dev/agentik-relay
-claude plugin install agent-relay@agent-relay
-go install github.com/agentik-dev/agentik-relay/cmd/relay@latest
+git clone https://github.com/agentik-dev/agentik-relay.git
+cd agentik-relay && make install  # agentik-relay; needs Go
+claude plugin install relay@agentik
 ```
 
-Then run `relay doctor` to check the machine for a night.
+Then run `agentik relay doctor` to check the machine for a night.
 
 ### [agentik-decisions](https://github.com/agentik-dev/agentik-decisions)
 
-A plugin and a `decisions` tool that keep a repository's settled decisions in one short `DECISIONS.md`.
+A plugin, `decisions`, and a tool, `agentik-decisions`, that keep a repository's settled decisions in one short `DECISIONS.md`.
 Use it so every session finds the rules it must follow without reading a long file whole.
 
 ```sh
-uv tool install .    # from a clone: the decisions tool
-claude plugin marketplace add agentik-dev/agentik-decisions
-claude plugin install decisions@claude-code-decisions
+git clone https://github.com/agentik-dev/agentik-decisions.git
+cd agentik-decisions && make install  # agentik-decisions; needs uv
+claude plugin install decisions@agentik
 ```
 
-Then run `decisions doctor` to check the setup.
+Then run `agentik decisions doctor` to check the setup.
 
 ### [agentik-respeak](https://github.com/agentik-dev/agentik-respeak)
 
-A plugin where agents write to each other in ratified shorthand and each person reads a narrative written for them.
+A plugin, `respeak`, where agents write to each other in ratified shorthand and each person reads a narrative written for them.
 Use it to read your agents' work in `eli5`, `bluf` or `technical` mode without learning their dialect.
 
 ```sh
-claude plugin marketplace add agentik-dev/agentik-respeak
-claude plugin install respeak@claude-code-respeak
+claude plugin install respeak@agentik
 ```
 
-It needs Claude Code 2.1.196 or newer and a python3 with PyYAML.
+It has no command line tool yet; it needs Claude Code 2.1.196 or newer and a python3 with PyYAML.
 Translation works at once; run `/respeak:init` once per project to set up the lexicon and the style gate.
 
 ### [agentik-agents](https://github.com/agentik-dev/agentik-agents)
 
-Tools and a plugin that run delegated Claude Code work on an Anthropic API key or a local model.
+A tool, `agentik-agents`, and a plugin, `agents`, that run delegated Claude Code work on an Anthropic API key or a local model.
 Use it to fan out read-only reviews under one hard dollar cap and see what each lane cost.
 
 ```sh
 git clone https://github.com/agentik-dev/agentik-agents.git
-cd agentik-agents && make install                    # links the tools into ~/.local/bin
-claude plugin marketplace add agentik-dev/agentik-agents
-claude plugin install claude-code-agents@claude-code-agents
+cd agentik-agents && make install  # agentik-agents and its tools
+claude plugin install agents@agentik
 ```
 
-The API lane needs a key, which `claude-api-agent --setup-key` stores encrypted with sops and age; the local lane needs none.
+The API lane needs a key, which `agentik agents setup-key` stores encrypted with sops and age; the local lane needs none.
+Then run `agentik agents doctor` to check the setup.
 
 ## How they fit
 

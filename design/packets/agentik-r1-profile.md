@@ -78,7 +78,7 @@ The may-touch row allows only this §6 under `design/` and no `history/` path, s
 - **Pin.** Branch `agentik-r1-profile` off `main` at `c9e6a4a`; agentik-commons `main` at `e456f4b`.
 - **Acts.**
   1. Vendor `scripts/{agentik,hygiene,bounded,vendored.sha256}` by `$C/scripts/sync .`; add `Makefile`, `.gitignore`, `.hygiene-allow` (rulings 1–3). Done: `make check` runs, red only on the page's 13 `renamed` lines.
-  2. Rewrite `profile/README.md` (rulings 4–8). Pending.
+  2. Rewrite `profile/README.md` (rulings 4–8). Done: one marketplace line, five `@agentik` installs, four `agentik <tool> doctor` lines, `renamed` 0; the page outside the commons entry is 5,821 bytes against 5,827 before.
   3. Run the acceptance lines and `scripts/hygiene --require-private`; fill §6.2. Pending.
 - **Handover.** None yet.
 - **Exit.** Open.
