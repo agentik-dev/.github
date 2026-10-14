@@ -79,6 +79,42 @@ The may-touch row allows only this §6 under `design/` and no `history/` path, s
 - **Acts.**
   1. Vendor `scripts/{agentik,hygiene,bounded,vendored.sha256}` by `$C/scripts/sync .`; add `Makefile`, `.gitignore`, `.hygiene-allow` (rulings 1–3). Done: `make check` runs, red only on the page's 13 `renamed` lines.
   2. Rewrite `profile/README.md` (rulings 4–8). Done: one marketplace line, five `@agentik` installs, four `agentik <tool> doctor` lines, `renamed` 0; the page outside the commons entry is 5,821 bytes against 5,827 before.
-  3. Run the acceptance lines and `scripts/hygiene --require-private`; fill §6.2. Pending.
-- **Handover.** None yet.
-- **Exit.** Open.
+  3. Run the acceptance lines and `scripts/hygiene --require-private`; fill §6.2. Done: every line reads as the table asks; the private scan exits 0.
+- **Handover.** The push waits on the owner (ruling 8). decide, owner: agentik-r1-decisions, that its `make install` installs `agentik-decisions` and `agentik` (§4.1 lists `uv tool install .`; D3 asks for the front door); consumer: this page's decisions block.
+- **Exit.** Done: three acts committed, every acceptance line green, `make check` 0.
+
+### 6.2 Report
+
+Acceptance, run in the worktree after the last commit:
+
+| # | reads |
+|---|---|
+| 1 | `0` |
+| 2 | `0` (and `groups.renamed.outside_files` reads `0`) |
+| 3 | `1`, `1` |
+| 4 | `5` |
+| 5 | `4` |
+| 6 | `1` |
+| 7 | `3` |
+| 8 | `same` |
+| 9 | `1` |
+| 10 | `0` |
+| header | `test -f .hygiene-allow` reads `0` |
+
+`scripts/hygiene --require-private` exits 0, no hit outside the allowlist.
+
+Commits: `1c342e3` act 1 (vendor, `Makefile`, `.gitignore`, `.hygiene-allow`); `be032cc` act 2 (the page); act 3 is the commit that holds this report.
+
+Rulings beyond §2, one sentence each:
+
+1. The charter lives in this §6, the only `design/` path the may-touch row allows.
+2. No `scripts/hygiene: renamed` row: the vendored copy does not hit its own patterns.
+3. `make check` pins all three files sync writes, `scripts/bounded` included, though the repo runs only hygiene.
+4. The decisions block installs by `make install` from a clone (§1, ruling 5, D3) and notes `needs uv`, since §4.1 and P3 install it with uv.
+5. The respeak block holds only its plugin line and says it has no command line tool yet (D4), so it has no clone and no `doctor`.
+6. Each block runs clone, `make install`, then the plugin, since the guide installs each CLI before its plugin; the front door's install is said once, in the commons entry.
+7. `## The five repos` becomes `## The repos`, since commons now heads the list and builds no tool.
+8. Ruling 8's bound reads as the page outside the commons entry staying at or under today's 5,827 bytes; it is 5,821.
+9. The page gains no `agentik session run --chain <name>` line, since it had no chain line before.
+
+Left open: the handover's one `decide` line; the push.
