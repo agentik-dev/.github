@@ -1,0 +1,5 @@
+# Exceptions to scripts/hygiene, one per line: <path-glob>: <group>[,<group>]
+# The profile page names the five public tools and their plugins.
+profile/README.md: sibling
+# The packets name the same five public tools.
+design/packets/*.md: sibling

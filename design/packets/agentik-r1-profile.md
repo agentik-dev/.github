@@ -68,3 +68,17 @@ Forbidden: transcripts, `~/.local/state`, `~/.config` (hygiene reads its private
 ## 6. Report (under 1,500 words)
 
 Each acceptance line's output; the commits; each ruling beyond §2; anything left open.
+
+### 6.1 Charter (the builder's, kept current at each commit)
+
+The may-touch row allows only this §6 under `design/` and no `history/` path, so the charter lives here.
+
+- **Goal.** The org profile page names the `agentik` surface: one marketplace, `agentik <tool>`, the new plugin names; `renamed` counts 0.
+- **Budget.** 60 turns, 80k context (the caller's word, over the header's 40); checkpoint at 80%.
+- **Pin.** Branch `agentik-r1-profile` off `main` at `c9e6a4a`; agentik-commons `main` at `e456f4b`.
+- **Acts.**
+  1. Vendor `scripts/{agentik,hygiene,bounded,vendored.sha256}` by `$C/scripts/sync .`; add `Makefile`, `.gitignore`, `.hygiene-allow` (rulings 1–3). Done: `make check` runs, red only on the page's 13 `renamed` lines.
+  2. Rewrite `profile/README.md` (rulings 4–8). Pending.
+  3. Run the acceptance lines and `scripts/hygiene --require-private`; fill §6.2. Pending.
+- **Handover.** None yet.
+- **Exit.** Open.
