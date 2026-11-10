@@ -24,11 +24,11 @@ decisions keeps what a project has already settled in one file, `DECISIONS.md`.
 It copies the few rules every session needs into `CLAUDE.md`.
 Agents may draft questions, but only you settle them.
 
-respeak lets agents write to each other in short, agreed shorthand, and writes a version for you in one of three modes: `eli5`, `bluf` or `technical`.
+respeak writes your agents' work for you as a narrative in one of three modes: `eli5`, `bluf` or `technical`.
 Everything it writes for people passes a check against a list of banned phrases.
 
-agents runs side work, such as a read-only code review, outside your interactive session.
-It bills that work to an Anthropic API key, or runs it on a local model, and reports what it cost.
+agents runs side work, such as a read-only code review, on a local model at no marginal cost.
+`agentik agents status` shows what every agent is doing right now.
 
 ## The repos
 
@@ -52,7 +52,7 @@ Use it so a session winds down at a known point and leaves a record you can read
 
 ```sh
 git clone https://github.com/agentik-dev/agentik-session.git
-cd agentik-session && make install  # agentik-session; Python 3.11 or newer
+cd agentik-session && make install  # agentik-session; /usr/bin/python3, 3.9 or newer
 claude plugin install session@agentik
 ```
 
@@ -78,7 +78,7 @@ Use it so every session finds the rules it must follow without reading a long fi
 
 ```sh
 git clone https://github.com/agentik-dev/agentik-decisions.git
-cd agentik-decisions && make install  # agentik-decisions; needs uv
+cd agentik-decisions && make install  # agentik-decisions and the agentik front door
 claude plugin install decisions@agentik
 ```
 
@@ -86,7 +86,7 @@ Then run `agentik decisions doctor` to check the setup.
 
 ### [agentik-respeak](https://github.com/agentik-dev/agentik-respeak)
 
-A plugin, `respeak`, where agents write to each other in ratified shorthand and each person reads a narrative written for them.
+A plugin, `respeak`, where each person reads a narrative of the agents' work written for them.
 Use it to read your agents' work in `eli5`, `bluf` or `technical` mode without learning their dialect.
 
 ```sh
@@ -94,12 +94,12 @@ claude plugin install respeak@agentik
 ```
 
 It has no command line tool yet; it needs Claude Code 2.1.196 or newer and a python3 with PyYAML.
-Translation works at once; run `/respeak:init` once per project to set up the lexicon and the style gate.
+It needs no setup per project, and it ships no hooks: nothing runs until you call `/respeak:respeak`.
 
 ### [agentik-agents](https://github.com/agentik-dev/agentik-agents)
 
-A tool, `agentik-agents`, and a plugin, `agents`, that run delegated Claude Code work on an Anthropic API key or a local model.
-Use it to fan out read-only reviews under one hard dollar cap and see what each lane cost.
+A tool, `agentik-agents`, and a plugin, `agents`, that show what every agent is doing and run a session's mechanical subagents on a local model.
+Use it to see every seat, helper and local agent in one view, and to run side work at no marginal cost.
 
 ```sh
 git clone https://github.com/agentik-dev/agentik-agents.git
@@ -107,7 +107,7 @@ cd agentik-agents && make install  # agentik-agents and its tools
 claude plugin install agents@agentik
 ```
 
-The API lane needs a key, which `agentik agents setup-key` stores encrypted with sops and age; the local lane needs none.
+The local lane needs Ollama and a local model, and `agentik agents route --check` names whatever is missing.
 Then run `agentik agents doctor` to check the setup.
 
 ## How they fit
@@ -117,8 +117,8 @@ Then run `agentik agents doctor` to check the setup.
 | session | A budget, a hard stop and a charter for each session | Writes one resolved configuration that relay, decisions and respeak read |
 | relay | An overnight queue, one branch per packet, a gated merge | Starts each packet as a `builder` session; renders its morning report through respeak |
 | decisions | One ledger of settled decisions | Renders its open questions through respeak |
-| respeak | Shorthand for agents, plain reading for people | Takes the session's tone from session |
-| agents | Delegated work on an API key or a local model, with costs | Its status view lists the sessions that session tracks |
+| respeak | A narrative of agent work, in the reader's mode | Takes the session's tone from session |
+| agents | A status view of every agent, and a local model for side work | Its status view lists the sessions that session tracks |
 
 Each one installs and works alone; a link in the last column turns on when the other plugin is installed.
 
