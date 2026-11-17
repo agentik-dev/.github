@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="330" viewBox="0 0 760 330" role="img" aria-labelledby="title desc"><title id="title">The seven-day reading over 25 hours of November 2026</title><desc id="desc">A line through 24 readings of the seven-day usage meter. It climbs from 75 to 98 percent over 25 hours, about 0.9 points an hour. The record ends at 98 percent and does not show what came after. The vertical axis starts at 50 percent.</desc><style>text{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;font-size:13px}.mono{font-family:ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;font-size:12px}.s{font-size:12px}.h{font-size:15px;font-weight:600}.b{font-weight:600}.term{fill:#11161d}.tt{fill:#e6edf3}.td{fill:#8b949e}.tbar{fill:#1f2630}.tedge{stroke:#3d444d;fill:none}.badge{fill:#f2cc60}.bt{fill:#1f2328}.dash{stroke-dasharray:6 4}.dot{stroke-dasharray:2 3}.bg{fill:#ffffff}.panel{fill:#f6f8fa}.fg{fill:#1f2328}.mu{fill:#59636e}.orch{fill:#0969da}.oth{fill:#bc4c00}.over{fill:#cf222e}.ok{fill:#1a7f37}.z-clear{fill:#d1f0d9}.z-notice{fill:#fff1b8}.z-wind-down{fill:#ffd8b5}.z-reserve{fill:#ffc1c0}.z-exhausted{fill:#cf222e}.soft{fill:#ddf4ff}.soft2{fill:#fff1e5}.grid{stroke:#d1d9e0;fill:none}.axis{stroke:#59636e;fill:none}.line{stroke:#1f2328;fill:none}.cp{stroke:#9a6700;fill:none}.ceil{stroke:#cf222e;fill:none}.s-orch{stroke:#0969da;fill:none}.s-oth{stroke:#bc4c00;fill:none}.edge{stroke:#d1d9e0;fill:none}.t{fill:#1f2328}.m{fill:#59636e}.halo{stroke:#ffffff;stroke-width:4px;paint-order:stroke;stroke-linejoin:round}@media (prefers-color-scheme: dark){.bg{fill:#0d1117}.panel{fill:#161b22}.fg{fill:#e6edf3}.mu{fill:#9198a1}.orch{fill:#4493f8}.oth{fill:#f0883e}.over{fill:#f85149}.ok{fill:#3fb950}.z-clear{fill:#1c4428}.z-notice{fill:#4b3a00}.z-wind-down{fill:#5a3000}.z-reserve{fill:#6b1a1d}.z-exhausted{fill:#f85149}.soft{fill:#12263f}.soft2{fill:#3d2410}.grid{stroke:#30363d;fill:none}.axis{stroke:#9198a1;fill:none}.line{stroke:#e6edf3;fill:none}.cp{stroke:#d29922;fill:none}.ceil{stroke:#f85149;fill:none}.s-orch{stroke:#4493f8;fill:none}.s-oth{stroke:#f0883e;fill:none}.edge{stroke:#3d444d;fill:none}.t{fill:#e6edf3}.m{fill:#9198a1}.halo{stroke:#0d1117;stroke-width:4px;paint-order:stroke;stroke-linejoin:round}}</style><rect width="760" height="330" class="bg"/>
+<text x="24" y="26" class="t h">The seven-day reading, 25 hours of November 2026</text>
+<text x="24" y="45" class="m s">With the usage band, which advises and refuses nothing. 24 readings; the axis starts at 50%.</text>
+<line x1="52" y1="230" x2="740" y2="230" class="grid" stroke-width="1"/>
+<text x="46" y="234" class="m s" text-anchor="end">60%</text>
+<line x1="52" y1="190" x2="740" y2="190" class="grid" stroke-width="1"/>
+<text x="46" y="194" class="m s" text-anchor="end">70%</text>
+<line x1="52" y1="150" x2="740" y2="150" class="grid" stroke-width="1"/>
+<text x="46" y="154" class="m s" text-anchor="end">80%</text>
+<line x1="52" y1="110" x2="740" y2="110" class="grid" stroke-width="1"/>
+<text x="46" y="114" class="m s" text-anchor="end">90%</text>
+<line x1="52" y1="70" x2="740" y2="70" class="grid" stroke-width="1"/>
+<text x="46" y="74" class="m s" text-anchor="end">100%</text>
+<text x="46" y="274" class="m s" text-anchor="end">50%</text>
+<line x1="52" y1="270" x2="740" y2="270" class="axis" stroke-width="1"/>
+<path d="M52,170 L56.5,166 L62.6,162 L74.5,158 L83,154 L96.2,150 L109.4,146 L115,142 L130.1,138 L144.1,134 L168.4,130 L188.3,126 L196.2,122 L216.9,118 L238.6,114 L265,110 L285.4,106 L306,102 L329.1,98 L347.8,94 L396,90 L445.5,86 L564.6,82 L713,78" class="s-orch" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="52" cy="170" r="2.8" class="orch"/>
+<circle cx="56.5" cy="166" r="2.8" class="orch"/>
+<circle cx="62.6" cy="162" r="2.8" class="orch"/>
+<circle cx="74.5" cy="158" r="2.8" class="orch"/>
+<circle cx="83" cy="154" r="2.8" class="orch"/>
+<circle cx="96.2" cy="150" r="2.8" class="orch"/>
+<circle cx="109.4" cy="146" r="2.8" class="orch"/>
+<circle cx="115" cy="142" r="2.8" class="orch"/>
+<circle cx="130.1" cy="138" r="2.8" class="orch"/>
+<circle cx="144.1" cy="134" r="2.8" class="orch"/>
+<circle cx="168.4" cy="130" r="2.8" class="orch"/>
+<circle cx="188.3" cy="126" r="2.8" class="orch"/>
+<circle cx="196.2" cy="122" r="2.8" class="orch"/>
+<circle cx="216.9" cy="118" r="2.8" class="orch"/>
+<circle cx="238.6" cy="114" r="2.8" class="orch"/>
+<circle cx="265" cy="110" r="2.8" class="orch"/>
+<circle cx="285.4" cy="106" r="2.8" class="orch"/>
+<circle cx="306" cy="102" r="2.8" class="orch"/>
+<circle cx="329.1" cy="98" r="2.8" class="orch"/>
+<circle cx="347.8" cy="94" r="2.8" class="orch"/>
+<circle cx="396" cy="90" r="2.8" class="orch"/>
+<circle cx="445.5" cy="86" r="2.8" class="orch"/>
+<circle cx="564.6" cy="82" r="2.8" class="orch"/>
+<circle cx="713" cy="78" r="2.8" class="orch"/>
+<line x1="52" y1="270" x2="52" y2="275" class="axis" stroke-width="1"/>
+<text x="52" y="289" class="m s" text-anchor="middle">hour 0</text>
+<line x1="210.8" y1="270" x2="210.8" y2="275" class="axis" stroke-width="1"/>
+<text x="210.8" y="289" class="m s" text-anchor="middle">hour 6</text>
+<line x1="369.5" y1="270" x2="369.5" y2="275" class="axis" stroke-width="1"/>
+<text x="369.5" y="289" class="m s" text-anchor="middle">hour 12</text>
+<line x1="528.3" y1="270" x2="528.3" y2="275" class="axis" stroke-width="1"/>
+<text x="528.3" y="289" class="m s" text-anchor="middle">hour 18</text>
+<line x1="687.1" y1="270" x2="687.1" y2="275" class="axis" stroke-width="1"/>
+<text x="687.1" y="289" class="m s" text-anchor="middle">hour 24</text>
+<text x="705" y="102" class="t s b halo" text-anchor="end">the record ends here, at 98%</text>
+<text x="396" y="206" class="orch s b" text-anchor="middle">seven-day reading: 75% to 98% over 25 hours,</text>
+<text x="396" y="223" class="orch s b" text-anchor="middle">about 0.9 points an hour</text>
+<text x="24" y="318" class="m s">Each dot is a reading; the line between two dots is drawn, not measured.</text>
+</svg>

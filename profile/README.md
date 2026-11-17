@@ -57,6 +57,7 @@ claude plugin install session@agentik
 ```
 
 Then run `agentik session doctor` to check the setup.
+How we use it to manage a context window, with figures: [five short primers](https://github.com/agentik-dev/.github/blob/main/profile/context/README.md).
 
 ### [agentik-relay](https://github.com/agentik-dev/agentik-relay)
 
