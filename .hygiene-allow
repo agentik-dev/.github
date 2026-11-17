@@ -3,3 +3,5 @@
 profile/README.md: sibling
 # The packets name the same five public tools.
 design/packets/*.md: sibling
+# The public site names its own public repos, and quotes two command names from a public test.
+site/index.html: sibling,renamed
