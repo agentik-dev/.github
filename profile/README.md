@@ -4,6 +4,8 @@
 
 <p align="center">Guardrails for long, unattended Claude Code work.</p>
 
+<p align="center"><a href="https://agentik-dev.github.io/">The site</a> · <a href="https://agentik-dev.github.io/agentik-site/">The research behind it</a></p>
+
 agentik is five Claude Code plugins, with their command line tools, for agent work that runs for hours with nobody watching.
 They give each session a budget and a hard stop, and they merge overnight work only when its checks pass.
 You read one report in the morning, and every stopped session leaves a way back in.

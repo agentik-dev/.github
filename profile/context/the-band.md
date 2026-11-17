@@ -68,5 +68,5 @@ None of these lines blocks anything. They are signals, and the sitting acts on t
 
 - [agentik-session, Budget](https://github.com/agentik-dev/agentik-session#budget): the meter, the zones and the lines, as the tool documents them.
 - [The mod design record](https://github.com/agentik-dev/agentik-session/blob/main/design/mod-r1.md): why the band only draws and never decides.
-- [Living inside a usage window](https://agentik-dev.github.io/agentik-research/journal/2026/10/14/living-inside-a-usage-window/): the journal entry on the usage band.
+- [Living inside a usage window](https://agentik-dev.github.io/agentik-site/journal/2026/10/14/living-inside-a-usage-window/): the journal entry on the usage band.
 - Next: [The charter and the launcher](respawn.md), or back to [the overview](README.md).

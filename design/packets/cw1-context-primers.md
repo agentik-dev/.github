@@ -18,7 +18,7 @@ The makers' rule on public repos: commit no hostname, address, email, person's n
 
 Sources, all public:
 - agentik-session: `README.md` (Profiles, Budget, Priority and pacing, The charter), `plugin/lib/claude_session/profiles.yaml`, `design/window-r1.md`, `design/respawn-r1.md`, `design/admission-r1.md`, `design/mod-r1.md`, `RUNBOOK.md`, and the code that writes the band, the meter line, the usage line, `CHECKPOINT:` and `EXIT:` (`hooks.py`, `mod.py`, `admission.py`, `rules.py`, `budget.py`, `chain.py`, `plugin/hooks/session.ts`).
-- agentik-research (served at `https://agentik-dev.github.io/agentik-research/`): `docs/field/length-and-compaction.md` (questions 1 and 2), `docs/field/budgets-and-lanes.md` (question 4), `docs/tools/session.md`, `docs/practices.md`, and two journal posts, of 2026-10-05 and 2026-10-14. A page's address follows `mkdocs.yml`: `site_url`, directory URLs, and the journal's `post_url_format: "{date}/{slug}"`.
+- agentik-research (served at `https://agentik-dev.github.io/agentik-site/`): `docs/field/length-and-compaction.md` (questions 1 and 2), `docs/field/budgets-and-lanes.md` (question 4), `docs/tools/session.md`, `docs/practices.md`, and two journal posts, of 2026-10-05 and 2026-10-14. A page's address follows `mkdocs.yml`: `site_url`, directory URLs, and the journal's `post_url_format: "{date}/{slug}"`.
 - The data: a cut of the makers' own session ledger, numbers only, already prepared for publishing: peak context per sitting as a share of its ceiling (1,867 sittings since 2026-09-24, in two groups: the orchestrator roles' 400k ceiling and every other role's 180k), the launcher's restarts a day, and one seven-day usage reading over 25 hours of November 2026.
 
 ## 2. Rulings

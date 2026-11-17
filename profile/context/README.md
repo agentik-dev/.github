@@ -52,5 +52,5 @@ The measured rows come from the makers' own use of the tools, one owner's record
 ## Read more
 
 - [agentik-session](https://github.com/agentik-dev/agentik-session): the plugin and its command line tool, with the profiles, the meter, the charter and the launcher.
-- [agentik-session, on the research site](https://agentik-dev.github.io/agentik-research/tools/session/): the tool's evidence, what has worked and what is open.
-- [Length and compaction](https://agentik-dev.github.io/agentik-research/field/length-and-compaction/): the studies behind a short context and a written handoff.
+- [agentik-session, on the research site](https://agentik-dev.github.io/agentik-site/tools/session/): the tool's evidence, what has worked and what is open.
+- [Length and compaction](https://agentik-dev.github.io/agentik-site/field/length-and-compaction/): the studies behind a short context and a written handoff.
