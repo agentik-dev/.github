@@ -10,7 +10,7 @@ Anthropic publishes no token counts for either.
 A helper's requests count toward the same limits as its sitting's.
 At a limit, Claude Code's `autoContinueAtUsageLimit` (on by default) resumes an open interactive session, re-arming at most twice; it is not offered in print mode.
 A background helper that hits the limit is marked failed, and its work has to be sent again.
-See [Budgets and pacing](https://agentik-dev.github.io/agentik-research/field/budgets-and-lanes/#question-4-budgets-and-pacing) and [the admission design](https://github.com/agentik-dev/agentik-session/blob/main/design/admission-r1.md#1-the-problem).
+See [Budgets and pacing](https://agentik-dev.github.io/agentik-site/field/budgets-and-lanes/#question-4-budgets-and-pacing) and [the admission design](https://github.com/agentik-dev/agentik-session/blob/main/design/admission-r1.md#1-the-problem).
 
 ## What the usage band projects
 
@@ -43,7 +43,7 @@ A sitting that waits on the meter, with room for 0 or a usage limit hit, keeps i
 It wakes at the band's reset or after one fallback, 1,800 seconds by default, whichever comes first.
 On the one-hour prompt cache, any idle wait wakes at most 3,300 seconds apart, so the cache does not expire under it.
 These are rules the sitting is told at its start; no hook enforces them.
-agentik-relay's runs have their own pause: at a five-hour limit a run waits and wakes two minutes after the reset ([Living inside a usage window](https://agentik-dev.github.io/agentik-research/journal/2026/10/14/living-inside-a-usage-window/)).
+agentik-relay's runs have their own pause: at a five-hour limit a run waits and wakes two minutes after the reset ([Living inside a usage window](https://agentik-dev.github.io/agentik-site/journal/2026/10/14/living-inside-a-usage-window/)).
 
 ## How work survives a limit
 
@@ -69,7 +69,7 @@ The band's mechanism is the drawing near the top of this page, not a measurement
 
 ## Read more
 
-- [Living inside a usage window](https://agentik-dev.github.io/agentik-research/journal/2026/10/14/living-inside-a-usage-window/): the journal entry on the band and the relay's pause, with what has not worked.
+- [Living inside a usage window](https://agentik-dev.github.io/agentik-site/journal/2026/10/14/living-inside-a-usage-window/): the journal entry on the band and the relay's pause, with what has not worked.
 - [The admission design](https://github.com/agentik-dev/agentik-session/blob/main/design/admission-r1.md): the projection, the verdicts and the proofs still owed.
 - [agentik-session, Priority and pacing](https://github.com/agentik-dev/agentik-session#priority-and-pacing): the rules a waiting sitting is told.
 - Back to [the overview](README.md).

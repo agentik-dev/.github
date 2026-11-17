@@ -21,20 +21,20 @@ A sitting that keeps to its ceiling never comes near that point.
 
 Four reasons. The first three rest on outside evidence; the fourth is the makers' design.
 
-1. **A long context does worse.** Studies find that accuracy falls as the input grows, even when the fact the model needs is in the window. One found falls of 13.9 to 85 percent with perfect retrieval. Anthropic's documentation names the effect *context rot*. No study measures a Claude 5.x model inside a Claude Code session as it fills. See [Length and compaction, question 1](https://agentik-dev.github.io/agentik-research/field/length-and-compaction/#question-1-what-changes-as-context-grows).
-2. **A summary drops the specifics.** Compaction keeps the gist and loses exact values. In one run of Anthropic's cookbook, a compaction kept 3 of 3 high-level facts and lost 3 of 3 obscure values. In a vendor's test of three compressors, the record of which files were touched scored lowest for all three, 2.19 to 2.45 out of 5. So agentik restarts from a written charter instead of compacting. No controlled study compares the two in a coding session. See [Length and compaction, question 2](https://agentik-dev.github.io/agentik-research/field/length-and-compaction/#question-2-compaction-or-restart).
-3. **Every turn pays for the whole context.** Each turn resends the whole conversation, so a turn costs more as the context grows, and it draws more from your usage limits. A sitting held to 400k never pays for a turn at 600k or 900k. The prices are documented; the arithmetic is the research site's. See [the cost model](https://agentik-dev.github.io/agentik-research/field/budgets-and-lanes/#the-cost-model).
+1. **A long context does worse.** Studies find that accuracy falls as the input grows, even when the fact the model needs is in the window. One found falls of 13.9 to 85 percent with perfect retrieval. Anthropic's documentation names the effect *context rot*. No study measures a Claude 5.x model inside a Claude Code session as it fills. See [Length and compaction, question 1](https://agentik-dev.github.io/agentik-site/field/length-and-compaction/#question-1-what-changes-as-context-grows).
+2. **A summary drops the specifics.** Compaction keeps the gist and loses exact values. In one run of Anthropic's cookbook, a compaction kept 3 of 3 high-level facts and lost 3 of 3 obscure values. In a vendor's test of three compressors, the record of which files were touched scored lowest for all three, 2.19 to 2.45 out of 5. So agentik restarts from a written charter instead of compacting. No controlled study compares the two in a coding session. See [Length and compaction, question 2](https://agentik-dev.github.io/agentik-site/field/length-and-compaction/#question-2-compaction-or-restart).
+3. **Every turn pays for the whole context.** Each turn resends the whole conversation, so a turn costs more as the context grows, and it draws more from your usage limits. A sitting held to 400k never pays for a turn at 600k or 900k. The prices are documented; the arithmetic is the research site's. See [the cost model](https://agentik-dev.github.io/agentik-site/field/budgets-and-lanes/#the-cost-model).
 4. **The handoff needs room.** The makers' own reason, from the budget module of agentik-session: a session that runs to 100% "dies mid-thought". It has no budget left to write down what it was doing, commit, or hand off. So the ceiling sits below the window, and the checkpoint sits below the ceiling.
 
 Helpers get a ceiling for the same reasons.
 Their context grows the same way, and their requests count toward the same usage limits as the main conversation.
 
 The figures themselves, 180,000 and 400,000 tokens and 400 turns, are the makers' rulings, not measurements.
-The research site says so: [the repo gives no derivation for them](https://agentik-dev.github.io/agentik-research/tools/session/#the-parts).
+The research site says so: [the repo gives no derivation for them](https://agentik-dev.github.io/agentik-site/tools/session/#the-parts).
 
 ## Why the checkpoint is at 80%
 
-The 80% checkpoint is the makers' rule, not a finding; the research site marks it as their own use and a conjecture ([Practices, budgets and pacing](https://agentik-dev.github.io/agentik-research/practices/#budgets-and-pacing-question-4)).
+The 80% checkpoint is the makers' rule, not a finding; the research site marks it as their own use and a conjecture ([Practices, budgets and pacing](https://agentik-dev.github.io/agentik-site/practices/#budgets-and-pacing-question-4)).
 
 The code says what the rest of the ceiling is for.
 The budget module holds back a reserve for the wrap-up and sets its marks below it:
@@ -65,8 +65,8 @@ The record does not say which sittings ran on, or why.
 
 ## Read more
 
-- [Length and compaction](https://agentik-dev.github.io/agentik-research/field/length-and-compaction/): the studies on length, compaction and restarts, with their limits.
-- [Budgets, pacing and cost lanes](https://agentik-dev.github.io/agentik-research/field/budgets-and-lanes/#question-4-budgets-and-pacing): usage limits, the prompt cache and the cost of a turn.
-- [Restart, don't compact](https://agentik-dev.github.io/agentik-research/journal/2026/10/05/restart-dont-compact/): the journal entry on the choice to restart.
+- [Length and compaction](https://agentik-dev.github.io/agentik-site/field/length-and-compaction/): the studies on length, compaction and restarts, with their limits.
+- [Budgets, pacing and cost lanes](https://agentik-dev.github.io/agentik-site/field/budgets-and-lanes/#question-4-budgets-and-pacing): usage limits, the prompt cache and the cost of a turn.
+- [Restart, don't compact](https://agentik-dev.github.io/agentik-site/journal/2026/10/05/restart-dont-compact/): the journal entry on the choice to restart.
 - [agentik-session, Profiles and Budget](https://github.com/agentik-dev/agentik-session#profiles): the ceilings, the zones and the lines, as the tool documents them.
 - Next: [Reading the band](the-band.md), or back to [the overview](README.md).

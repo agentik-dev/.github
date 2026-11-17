@@ -17,8 +17,8 @@ It has six parts and stays under 4,096 bytes:
 `agentik session charter open "<goal>"` writes it, `charter check` checks its shape, and `charter close` adds the exit line.
 
 Why a written file and not a summary?
-A compaction keeps the gist and loses exact values, and nothing measured shows that it beats a restart, or the reverse ([Length and compaction, question 2](https://agentik-dev.github.io/agentik-research/field/length-and-compaction/#question-2-compaction-or-restart)).
-The makers ruled for the restart on two grounds of their own: a restart reads its brief fresh, and a compaction needs a person's hand ([Restart, don't compact](https://agentik-dev.github.io/agentik-research/journal/2026/10/05/restart-dont-compact/)).
+A compaction keeps the gist and loses exact values, and nothing measured shows that it beats a restart, or the reverse ([Length and compaction, question 2](https://agentik-dev.github.io/agentik-site/field/length-and-compaction/#question-2-compaction-or-restart)).
+The makers ruled for the restart on two grounds of their own: a restart reads its brief fresh, and a compaction needs a person's hand ([Restart, don't compact](https://agentik-dev.github.io/agentik-site/journal/2026/10/05/restart-dont-compact/)).
 
 ## The RESPAWN close
 
@@ -85,5 +85,5 @@ Across the 35 days, the median of each day's median sitting length is 109 minute
 
 - [The respawn design](https://github.com/agentik-dev/agentik-session/blob/main/design/respawn-r1.md): the launcher's rules, its guards and what it cannot see.
 - [agentik-session, The charter and Budget](https://github.com/agentik-dev/agentik-session#the-charter): the charter's verbs and the RESPAWN close.
-- [agentik-session, on the research site](https://agentik-dev.github.io/agentik-research/tools/session/#what-has-not-worked-and-what-is-open): what has failed, including a sitting that wrote RESPAWN and never ran the checkpoint.
+- [agentik-session, on the research site](https://agentik-dev.github.io/agentik-site/tools/session/#what-has-not-worked-and-what-is-open): what has failed, including a sitting that wrote RESPAWN and never ran the checkpoint.
 - Next: [Living inside usage windows](usage-windows.md), or back to [the overview](README.md).
